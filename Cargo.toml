@@ -1,0 +1,41 @@
+[workspace]
+members = [
+    "crates/mcp-types",
+    "crates/rmcp-client",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/aionixone/aionix-mcp"
+version = "0.1.0"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = "warn"
+
+[workspace.dependencies]
+anyhow = "1"
+axum = { version = "0.7", default-features = false }
+dirs = "5"
+escargot = "0.5"
+futures = { version = "0.3", default-features = false }
+keyring = "3"
+mcp-types = { path = "crates/mcp-types" }
+pretty_assertions = "1"
+reqwest = { version = "0.12", default-features = false }
+rmcp = { version = "0.7", default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serial_test = "3"
+sha2 = "0.10"
+tempfile = "3"
+tiny_http = "0.12"
+tokio = "1"
+tracing = "0.1"
+ts-rs = { version = "10", features = ["serde-json-impl", "no-serde-warnings"] }
+urlencoding = "2.1"
+webbrowser = "0.8"
