@@ -1,0 +1,32 @@
+# Build artifacts
+/target/
+
+# Aionix local state (db, manifests, build logs, artifacts)
+/.aionixfn/
+
+# Logs
+*.log
+/logs/
+
+# Environment files
+.env
+.env.*
+
+# OS/editor metadata
+.DS_Store
+/.idea/
+/.vscode/
+/.fleet/
+
+# Python caches
+__pycache__/
+/.pytest_cache/
+/.mypy_cache/
+
+# Node/JS (in case of examples)
+/node_modules/
+
+# Misc
+*.tmp
+*.swp
+*.swo
