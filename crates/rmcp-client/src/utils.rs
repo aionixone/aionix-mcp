@@ -238,11 +238,9 @@ mod tests {
         let mut fake_env = HashMap::new();
         fake_env.insert(custom_var.to_string(), value.to_string());
 
-        let env = create_env_for_mcp_server_with_reader(
-            None,
-            &[custom_var.to_string()],
-            |key| fake_env.get(key).cloned(),
-        );
+        let env = create_env_for_mcp_server_with_reader(None, &[custom_var.to_string()], |key| {
+            fake_env.get(key).cloned()
+        });
         assert_eq!(env.get(custom_var), Some(&value.to_string()));
     }
 

@@ -8,6 +8,7 @@ mod utils;
 
 pub use auth_status::determine_streamable_http_auth_status;
 pub use auth_status::supports_oauth_login;
+pub use mcp_types::McpAuthStatus;
 pub use oauth::OAuthCredentialsStoreMode;
 pub use oauth::StoredOAuthTokens;
 pub use oauth::WrappedOAuthTokenResponse;
@@ -16,4 +17,3 @@ pub(crate) use oauth::load_oauth_tokens;
 pub use oauth::save_oauth_tokens;
 pub use perform_oauth_login::perform_oauth_login;
 pub use rmcp_client::RmcpClient;
-pub use mcp_types::McpAuthStatus;

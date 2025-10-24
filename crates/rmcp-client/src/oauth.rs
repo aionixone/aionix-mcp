@@ -606,8 +606,8 @@ mod tests {
     use std::sync::PoisonError;
     use tempfile::tempdir;
 
-    use crate::find_aionix_home::set_aionix_home_override;
     use crate::find_aionix_home::AionixHomeOverrideGuard;
+    use crate::find_aionix_home::set_aionix_home_override;
 
     #[derive(Default, Clone)]
     struct MockCredentialStore {
